@@ -6,10 +6,10 @@ import random
 a = random.randint(1, 10)
 d = random.randint(1, 5)
 
-lst = []
+A = []
 for i in range(10):
-    lst.append(a + i * d)
+    A.append(a + i * d)
 
 print("A =", a)
 print("D =", d)
-print("Прогрессия:", lst)
+print("Прогрессия:", A)

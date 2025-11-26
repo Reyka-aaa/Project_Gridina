@@ -2,16 +2,20 @@
 # со вторым, третий — с четвертым и т. д.
 import random
 
-n = random.randint(2, 10) * 2
-lst = []
-for i in range(n):
-    lst.append(random.randint(1, 100))
+N = random.randint(2, 10) * 2    # даёт четные числа
+print("N =", N)
 
-print("N =", n) # размер списка
-print("список:", lst)
+# список случайных чисел
+A = []
+for i in range(N):
+    A.append(random.randint(1, 10))
 
-for i in range(0, n, 2):
-    lst[i], lst[i+1] = lst[i+1], lst[i]
+print("Исходный список:", A)
 
-print("результат:", lst)
+# меняем местами 1-й со 2-м, 3-й с 4-м и т.д.
+for i in range(0, N, 2):
+    A[i], A[i+1] = A[i+1], A[i]
+
+print("После обмена:", A)
+
 

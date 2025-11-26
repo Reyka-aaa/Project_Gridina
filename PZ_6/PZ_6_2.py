@@ -3,15 +3,15 @@
 import random
 
 n = random.randint(3, 15)
-lst = []
+A = []
 for i in range(n):
-    lst.append(random.randint(1, 100))
+    A.append(random.randint(1, 100))
 
 print("N =", n)  # размер списка
-print("список:", lst)
+print("список:", A)
 
 for i in range(1, n-1):
-    if lst[i] < lst[i-1] and lst[i] < lst[i+1]:
+    if A[i] < A[i-1] and A[i] < A[i+1]: # меньше левого и меньше правого
         print(f'локальный минимум: {i}')
         break
 else:
