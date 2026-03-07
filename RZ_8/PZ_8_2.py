@@ -5,11 +5,9 @@
 data = 'апельсины 45 991 63 100 12 яблоки 13 47 26 0 16'
 parts = data.split()
 
-# Создаем словарь с максимальными значениями
-result = {
-    parts[0]: max(map(int, parts[1:6])),    # апельсины
-    parts[6]: max(map(int, parts[7:12]))    # яблоки
-}
+# fromkeys() и update()
+result = dict.fromkeys([parts[0], parts[6]], 0)
+result.update({parts[0]: max(map(int, parts[1:6])),
+               parts[6]: max(map(int, parts[7:12]))})
 
-print("Исходная строка:", data)
-print("Максимальные продажи:", result)
+print(result.items())

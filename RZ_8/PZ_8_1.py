@@ -2,8 +2,8 @@
 keys = ['Ten', 'Twenty', 'Thirty']
 values = [10, 20, 30]
 
-pairs = list(zip(keys, values))
-print(pairs)
+result_dict = {}
+for i in range(len(keys)):
+    result_dict.update({keys[i]: values[i]})  # метод update()
 
-result_dict = dict(zip(keys, values))
 print(result_dict)
