@@ -19,7 +19,6 @@ print("Книги во всех магазинах:", books_in_all)
 
 # (книги, которые есть хотя бы в одном магазине, но не во всех)
 books_not_in_all = all_books - books_in_all
-
 # Или можно взять любую одну книгу из этого множества
 one_book_not_in_all = next(iter(books_not_in_all)) if books_not_in_all else None
 print("Книги, которые есть не во всех магазинах:", books_not_in_all)
