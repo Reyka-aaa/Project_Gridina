@@ -12,10 +12,10 @@ o2 = "invalid_phones.txt"
 with open(i, "r", encoding="utf-8") as f:
     l = f.readlines()
 
-p = re.compile(r"\d{11}") # любая цифра 0–9 и ровно 11 повторений подряд
-v = [] # список для корректных
+p = re.compile(r"\d{11}")
+v = []
 n = []
-c1 = 0 # счетчик корректных
+c1 = 0
 c2 = 0
 
 for s in l:
